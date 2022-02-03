@@ -106,7 +106,7 @@ const initialBaseballPerformance = {
 };
 
 const BaseballPage = () => {
-  const { member, setMember } = useContext(Context);
+  // const { member, setMember } = useContext(Context);
   const [values, setValues] = useState(initialBaseinfos);
   const [valContact, setValContact] = useState(initialContacts);
   const [valSubjects, setValSubjects] = useState(initialSubjects);
@@ -117,10 +117,11 @@ const BaseballPage = () => {
     image: Nobody,
   });
   const [photo, setPhoto] = useState({ image: Nobody });
-  const router = useRouter();
-  console.log(router);
-  useEffect(() => {
+  const { query } = useRouter();
+  console.log(3388, query);
+  const member = query.member;
 
+  useEffect(() => {
     const getBaseballInfo = async () => {
       try {
         const url = process.env.HOST_URI + `api/baseballInfo/${member}`;
@@ -228,12 +229,15 @@ const BaseballPage = () => {
       }
     };
 
-    getBaseballInfo();
-    getContacts();
-    getSubjects();
-    getPerformance();
-    getPhoto();
-  }, []);
+    if (member !== undefined) {
+      getBaseballInfo();
+      getContacts();
+      getSubjects();
+      getPerformance();
+      getPhoto();
+    }
+  }, [member]);
+
 
   const onSubmitHandler = async (e) => {
     e.preventDefault();
@@ -303,16 +307,17 @@ const BaseballPage = () => {
               <OutputContent cols="6" name="Hight" main="" value1={feetHeight(values.Height)} value2={(values.Weight / 0.454).toFixed(1)} unit1="" unit2="lb" />
             </Col>
           </Row>
+          <br /><br />
           <Row className={styles.sheettable}>
             <Col xs={1}></Col>
             <Col xs={1}>
-              <OutputText cols="12" name="LeftRightHand" main="B/T" value={valContact.LeftRightHand} />
+              <OutputText cols="12" name="LeftRightHand" main="B/T" value={values.LeftRightHand} />
             </Col>
             <Col xs={2}>
-              <OutputText cols="12" name="PriPosition" main="Position" value={valContact.PriPosition} />
+              <OutputText cols="12" name="PriPosition" main="Position" value={values.PriPosition} />
             </Col>
             <Col xs={4}>
-              <OutputText cols="12" name="SecPosition" main="Other Position" value={valContact.SecPosition} />
+              <OutputText cols="12" name="SecPosition" main="Other Position" value={values.SecPosition} />
             </Col>
             <Col xs={4}>
               <OutputText cols="12" name="Throwing" main="Throwing Velocity" value={valPerformance.Throwing} />
@@ -344,7 +349,7 @@ const BaseballPage = () => {
           <br /><br />
           <Row className={styles.sheettable}>
             <Col xs={1}></Col>
-            <Col xs={1}><OutputText cols="12" name="gamesH" main="Games" value={valPerformance.gamesH} /></Col>
+            <Col xs={1}><OutputText cols="12" name="gamesH" main="G" value={valPerformance.gamesH} /></Col>
             <Col xs={1}><OutputText cols="12" name="AB" main="AB" value={valPerformance.AB} /></Col>
             <Col xs={1}><OutputText cols="12" name="AVG" main="AVG" value={valPerformance.AVG} /></Col>
             <Col xs={1}><OutputText cols="12" name="OPS" main="OPS" value={valPerformance.OPS} /></Col>
