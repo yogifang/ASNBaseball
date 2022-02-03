@@ -13,7 +13,7 @@ const OutputContent = (props) => {
     <>
       <Col xs={props.cols} className={styles.sheetcell}>
         <Form.Label htmlFor={props.name} className={styles.pagemain}>
-          <p className={styles.pagevalue}>
+          <p className={styles.pagevaluewhite}>
             {value1}
             {props.unit1}
             {" / "}

@@ -14,6 +14,7 @@ import OutputMonth from "../components/OutputMonth";
 import FileBase64 from "react-file-base64";
 import OutputTextBig from "../components/OutputTextBig";
 import OutputContent from "../components/OutputContent";
+import OutputTextWhite from "../components/OutputTextWhite";
 import Nobody from "../components/nobody";
 
 const initialBaseinfos = {
@@ -282,11 +283,11 @@ const BaseballPage = () => {
 
   const feetHeight = (cm) => {
     if (cm !== undefined && cm !== null && cm !== 0) {
-      const feet = Math.floor(cm.height / 30.48);
+      const feet = Math.floor(cm / 30.48);
       const inches = ((cm - feet * 30.48) / 2.54).toFixed(0);
       return feet.toString() + "'" + inches.toString() + '"';
     } else {
-      return "0";
+      return "";
     }
 
   };
@@ -302,9 +303,9 @@ const BaseballPage = () => {
             </Col>
             <Col xs={7}>
               <OutputTextBig cols="12" name="PassportName" main="" value={values.PassportName} />
-              <OutputText cols="12" name="Gender" main="" value={values.Gender} />
+              <OutputTextWhite cols="12" name="Gender" main="" value={values.Gender} />
               <OutputDate cols="12" name="Birthday" main="" value={valContact.birthday} />
-              <OutputContent cols="6" name="Hight" main="" value1={feetHeight(values.Height)} value2={(values.Weight / 0.454).toFixed(1)} unit1="" unit2="lb" />
+              <OutputContent cols="12" name="Height" main="" value1={feetHeight(values.Height)} value2={(values.Weight / 0.454).toFixed(1)} unit1="" unit2="lb" />
             </Col>
           </Row>
           <br /><br />
@@ -348,7 +349,6 @@ const BaseballPage = () => {
           </Row>
           <br /><br />
           <Row className={styles.sheettable}>
-            <Col xs={1}></Col>
             <Col xs={1}><OutputText cols="12" name="gamesH" main="G" value={valPerformance.gamesH} /></Col>
             <Col xs={1}><OutputText cols="12" name="AB" main="AB" value={valPerformance.AB} /></Col>
             <Col xs={1}><OutputText cols="12" name="AVG" main="AVG" value={valPerformance.AVG} /></Col>

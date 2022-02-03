@@ -253,19 +253,37 @@
 .sheetcell {
   height: 1.8rem;
 }
+.sheetdate {
+  height: 1.8rem;
+  color: white;
+}
 .pagemain {
   font-size: 10px;
-  text-align: left;
+  text-align: center;
 }
 .pagevalue {
   font-size: 14px;
-  text-align: left;
+  text-align: center;
   font-weight: bold;
+  font-style: italic;
+  color: orange;
+}
+.pagemainwhite {
+  font-size: 10px;
+  text-align: center;
+}
+.pagevaluewhite {
+  font-size: 14px;
+  text-align: center;
+  font-weight: bold;
+  font-style: italic;
+  color: white;
 }
 .pagevaluebig {
-  font-size: 20px;
+  font-size: 24px;
   text-align: left;
   font-weight: bold;
+  color: white;
 }
 .sidetitle {
   writing-mode: vertical-lr;
