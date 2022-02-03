@@ -1,0 +1,277 @@
+.container {
+  width: auto;
+  height: auto;
+  padding-top: 0px;
+  padding-left: 0px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  margin-left: 2 px !important;
+}
+
+.contant {
+  width: 100%;
+  margin-top: 0px;
+  margin-left: 0px;
+  padding-top: 40px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  background-color: none !important;
+  overflow-y: auto;
+}
+
+.rowLine {
+  flex: 0 auto;
+  margin-top: 0px;
+  margin-left: 0px;
+  margin-bottom: 0px;
+  padding-top: 0px;
+  display: flex;
+  height: 40px;
+  min-height: 40px !important;
+}
+
+.btnAppLogin {
+  padding: 0;
+  display: block !important;
+  margin: 0 auto !important;
+  width: 168px;
+  height: 92px;
+  border: none;
+  background-image: url("../pages/assets/buttons/login.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-color: unset !important;
+}
+
+.btnAppLogin:hover {
+  box-shadow: 10px 5px 5px black;
+}
+
+.btnAppLoginSmall {
+  padding: 0;
+  display: block !important;
+  margin: 0 auto !important;
+  width: 84px;
+  height: 46px;
+  border: none;
+  background-image: url("../pages/assets/buttons/login.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-color: unset !important;
+}
+
+.btnAppNextSmall {
+  padding: 0;
+  display: block !important;
+  margin: 0 auto !important;
+  width: 84px;
+  height: 46px;
+  border: none;
+  background-image: url("../pages/assets/buttons/next.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-color: unset !important;
+}
+
+.btnAppLoginSmall:hover {
+  box-shadow: 5px 3px 3px black;
+}
+
+.btnAppCreate {
+  display: block !important;
+  margin: 0 auto !important;
+  width: 168px;
+  height: 92px;
+  border: none;
+  background-image: url("../pages/assets/buttons/register.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-color: unset !important;
+}
+
+.btnAppCreate:hover {
+  box-shadow: 10px 5px 5px black;
+}
+
+.main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.title a {
+  color: #0070f3;
+  text-decoration: none;
+  padding: 0;
+}
+
+.title a:hover,
+.title a:focus,
+.title a:active {
+  text-decoration: underline;
+}
+
+.title {
+  margin: 0;
+  line-height: 1.15;
+  font-size: 4rem;
+}
+
+.title,
+.description {
+  text-align: center;
+}
+
+.description {
+  line-height: 1.5;
+  font-size: 1.5rem;
+}
+
+.grid {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  max-width: 800px;
+  margin-top: 3rem;
+}
+
+.colLeftMain {
+  display: block;
+  text-align: right;
+  font-size: 16px;
+}
+
+.colLeftSub {
+  display: block;
+  text-align: right;
+  font-size: 8px;
+}
+
+.colRightMain {
+  display: block;
+  padding: 0;
+  text-align: left;
+  font-size: 18px;
+  margin-bottom: 0;
+  width: 60%;
+}
+
+.colRightSub {
+  display: block;
+  margin-top: 0px;
+  padding: 0;
+  text-align: left;
+  font-size: 8px;
+}
+
+.colLeftMain2 {
+  display: block;
+  text-align: right;
+  font-size: 14px;
+}
+
+.colLeftSub2 {
+  display: block;
+  text-align: right;
+  font-size: 5px;
+}
+
+.colRightMain2 {
+  display: block;
+  padding: 0;
+  text-align: left;
+  font-size: 14px;
+  margin-bottom: 0;
+  width: 60%;
+}
+
+.colRightSub2 {
+  display: block;
+  margin-top: 0px;
+  padding: 0;
+  text-align: left;
+  font-size: 5px;
+}
+.m0 {
+  text-align: center;
+  display: block;
+}
+
+.textorange {
+  display: block;
+  margin-top: 0px;
+  color: #f7931e;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 0px;
+}
+
+.textpurple {
+  display: block;
+  color: #1b1464;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 0px;
+}
+.bgorange {
+  display: inline-block;
+  padding-top: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
+  font-weight: normal;
+  font-size: 8px;
+  color: #ffffff;
+  background-color: #f7931e;
+  margin-bottom: 10px;
+}
+.bgboarder {
+  border: 1px solid #f7931e;
+}
+.rightSelect {
+  display: block;
+  padding: 0;
+  text-align: left;
+  font-size: 16px;
+  margin-bottom: 0;
+  width: 60%;
+}
+.centerSelect {
+  display: block;
+  margin-left: 0px;
+  text-align: left;
+  font-size: 16px;
+  margin-bottom: 0;
+  width: 50%;
+}
+
+.sheettable {
+  font-size: 10px;
+}
+.sheetcell {
+  height: 1.8rem;
+}
+.pagemain {
+  font-size: 10px;
+  text-align: left;
+}
+.pagevalue {
+  font-size: 14px;
+  text-align: left;
+  font-weight: bold;
+}
+.pagevaluebig {
+  font-size: 20px;
+  text-align: left;
+  font-weight: bold;
+}
+.sidetitle {
+  writing-mode: vertical-lr;
+  color: #ffffff;
+  padding-left: 80px;
+}
+.sidecolumn {
+  background-color: #c0c0c0;
+}
