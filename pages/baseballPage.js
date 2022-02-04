@@ -310,18 +310,21 @@ const BaseballPage = () => {
         <br /><br /><br />
         <Row className={styles.sheettable}>
           <Col xs={1}></Col>
-          <Col xs={2}>
-            <OutputText cols="12" name="LeftRightHand" main="B/T" value={values.LeftRightHand} />
-          </Col>
-          <Col xs={2}>
-            <OutputText cols="12" name="PriPosition" main="Position" value={values.PriPosition} />
-          </Col>
           <Col xs={3}>
-            <OutputText cols="12" name="SecPosition" main="Position 2" value={values.SecPosition} />
+            <Row>
+              <OutputText cols="5" name="LeftRightHand" main="B/T" value={values.LeftRightHand} />
+              <OutputText cols="7" name="PriPosition" main="Position" value={values.PriPosition} />
+            </Row>
           </Col>
-          <Col xs={4}>
-            <OutputText cols="12" name="Throwing" main="Throwing Velocity" value={valPerformance.Throwing} />
+          <Col xs={8}>
+            <Row>
+              <OutputText cols="5" name="SecPosition" main="Other Position" value={values.SecPosition} />
+              <OutputText cols="6" name="Throwing" main="Throwing Velocity" value={valPerformance.Throwing} />
+            </Row>
           </Col>
+
+
+
 
         </Row>
         <br /><br />
