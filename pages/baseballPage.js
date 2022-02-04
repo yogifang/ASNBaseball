@@ -119,7 +119,7 @@ const BaseballPage = () => {
   });
   const [photo, setPhoto] = useState({ image: Nobody });
   const { query } = useRouter();
-  console.log(3388, query);
+  // console.log(3388, query);
   const member = query.member;
 
   useEffect(() => {
