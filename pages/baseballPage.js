@@ -325,7 +325,6 @@ const BaseballPage = () => {
 
 
 
-
         </Row>
         <br /><br />
         <Row className={styles.sheettable}>
@@ -343,6 +342,9 @@ const BaseballPage = () => {
           <Col xs={1}> <OutputText cols="12" name="K" main="K" value={valPerformance.K} /></Col>
           <Col xs={1}></Col>
         </Row>
+        <br /><br />
+        <hr style={{ border: "2px solid #ffa500", width: "60%", marginLeft: "5rem", marginRight: "5rem" }} />
+
         <br /><br />
         <Row className={styles.sheettable}>
           <Col xs={1}></Col>
@@ -367,6 +369,7 @@ const BaseballPage = () => {
 
         </Row>
         <br /><br />
+        <hr style={{ border: "2px solid #ffa500", width: "60%", marginLeft: "5rem", marginRight: "5rem" }} />
 
       </div>
     </Container >
