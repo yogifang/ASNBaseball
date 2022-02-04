@@ -44,8 +44,7 @@ export default function Home() {
   return (
     <Container className={styles.container}>
 
-      <div className={styles.contant}>
-      </div>
+
     </Container>
   );
 }

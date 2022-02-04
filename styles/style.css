@@ -37,8 +37,9 @@ h4 {
 }
 
 .form-container {
-  width: 400px;
-  margin: 20px auto;
+  width: 100%;
+  padding-top: 3rem;
+  margin: 2rem auto;
 }
 
 .note-container {

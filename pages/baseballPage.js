@@ -294,78 +294,77 @@ const BaseballPage = () => {
 
   return (
     <Container className={styles.container}>
-      <div className={styles.contant}>
-        <div className={styles.sheettable} >
-          <Row className={styles.sheettable}>
-            <Col xs={1}></Col>
-            <Col xs={3}>
-              <Image placeholder="empty" src={photo.image} alt="Picture of the author" width={"320rem"} height={"320rem"} />
-            </Col>
-            <Col xs={7}>
-              <OutputTextBig cols="12" name="PassportName" main="" value={values.PassportName} />
-              <OutputTextWhite cols="12" name="Gender" main="" value={values.Gender} />
-              <OutputDate cols="12" name="Birthday" main="" value={valContact.birthday} />
-              <OutputContent cols="12" name="Height" main="" value1={feetHeight(values.Height)} value2={(values.Weight / 0.454).toFixed(1)} unit1="" unit2="lb" />
-            </Col>
-          </Row>
-          <br /><br />
-          <Row className={styles.sheettable}>
-            <Col xs={1}></Col>
-            <Col xs={1}>
-              <OutputText cols="12" name="LeftRightHand" main="B/T" value={values.LeftRightHand} />
-            </Col>
-            <Col xs={2}>
-              <OutputText cols="12" name="PriPosition" main="Position" value={values.PriPosition} />
-            </Col>
-            <Col xs={4}>
-              <OutputText cols="12" name="SecPosition" main="Other Position" value={values.SecPosition} />
-            </Col>
-            <Col xs={4}>
-              <OutputText cols="12" name="Throwing" main="Throwing Velocity" value={valPerformance.Throwing} />
-            </Col>
-          </Row>
-          <br /><br />
-          <Row className={styles.sheettable}>
-            <Col xs={1}></Col>
-            <Col xs={1}><OutputText cols="12" name="ERA" main="ERA" value={valPerformance.ERA} /></Col>
-            <Col xs={1}><OutputText cols="12" name="gamesP" main="G" value={valPerformance.gamesP} /></Col>
-            <Col xs={1}><OutputText cols="12" name="IP" main="IP" value={valPerformance.IP} /></Col>
-            <Col xs={1}><OutputText cols="12" name="BH" main="H" value={valPerformance.BH} /></Col>
-            <Col xs={1}><OutputText cols="12" name="BRUN" main="R" value={valPerformance.BRUN} /></Col>
+      <div className={styles.sheettable} >
+        <Row className={styles.sheettable}>
+          <Col xs={2}></Col>
+          <Col xs={3}>
+            <Image placeholder="empty" src={photo.image} alt="Picture of the author" width={"320rem"} height={"320rem"} />
+          </Col>
+          <Col xs={7}>
+            <OutputTextBig cols="12" name="PassportName" main="" value={values.PassportName} />
+            <OutputTextWhite cols="12" name="Gender" main="" value={values.Gender} />
+            <OutputDate cols="12" name="Birthday" main="" value={valContact.birthday} />
+            <OutputContent cols="12" name="Height" main="" value1={feetHeight(values.Height)} value2={(values.Weight / 0.454).toFixed(1)} unit1="" unit2="lb" />
+          </Col>
+        </Row>
+        <br /><br /><br />
+        <Row className={styles.sheettable}>
+          <Col xs={1}></Col>
+          <Col xs={2}>
+            <OutputText cols="12" name="LeftRightHand" main="B/T" value={values.LeftRightHand} />
+          </Col>
+          <Col xs={2}>
+            <OutputText cols="12" name="PriPosition" main="Position" value={values.PriPosition} />
+          </Col>
+          <Col xs={3}>
+            <OutputText cols="12" name="SecPosition" main="Position 2" value={values.SecPosition} />
+          </Col>
+          <Col xs={4}>
+            <OutputText cols="12" name="Throwing" main="Throwing Velocity" value={valPerformance.Throwing} />
+          </Col>
 
-            <Col xs={1}><OutputText cols="12" name="ER" main="ER" value={valPerformance.ER} /></Col>
-            <Col xs={1}><OutputText cols="12" name="BHR" main="HR" value={valPerformance.BHR} /></Col>
-            <Col xs={1}><OutputText cols="12" name="HB" main="HB" value={valPerformance.HB} /></Col>
-            <Col xs={1}><OutputText cols="12" name="BB" main="BB" value={valPerformance.BB} /></Col>
-            <Col xs={1}> <OutputText cols="12" name="K" main="K" value={valPerformance.K} /></Col>
-            <Col xs={1}></Col>
-          </Row>
-          <br /><br />
-          <Row className={styles.sheettable}>
-            <Col xs={1}></Col>
-            <Col xs={3}><OutputText cols="12" name="EXIT" main="Exit Velocity" value={valPerformance.EXIT} /></Col>
-            <Col xs={4}><OutputText cols="12" name="SixtyYardSplit" main="60 yard sprint(s)" value={valPerformance.SixtyYardSplit} /></Col>
-            <Col xs={4}><OutputText cols="12" name="TenYardSplit" main="10 yard sprint(s)" value={valPerformance.TenYardSplit} /></Col>
-          </Row>
-          <br /><br />
-          <Row className={styles.sheettable}>
-            <Col xs={1}><OutputText cols="12" name="gamesH" main="G" value={valPerformance.gamesH} /></Col>
-            <Col xs={1}><OutputText cols="12" name="AB" main="AB" value={valPerformance.AB} /></Col>
-            <Col xs={1}><OutputText cols="12" name="AVG" main="AVG" value={valPerformance.AVG} /></Col>
-            <Col xs={1}><OutputText cols="12" name="OPS" main="OPS" value={valPerformance.OPS} /></Col>
-            <Col xs={1}> <OutputText cols="12" name="RUN" main="R" value={valPerformance.RUN} /></Col>
-            <Col xs={1}><OutputText cols="12" name="Hits" main="H" value={valPerformance.Hits} /></Col>
-            <Col xs={1}><OutputText cols="12" name="Hit2B" main="2B" value={valPerformance.Hit2B} /></Col>
-            <Col xs={1}><OutputText cols="12" name="Hit3B" main="3B" value={valPerformance.Hit3B} /></Col>
-            <Col xs={1}><OutputText cols="12" name="HR" main="HR" value={valPerformance.HR} /></Col>
-            <Col xs={1}><OutputText cols="12" name="BK" main="K" value={valPerformance.BK} /></Col>
-            <Col xs={1}><OutputText cols="12" name="BBB" main="BB" value={valPerformance.BBB} /></Col>
-            <Col xs={1}></Col>
-            <Col xs={1}></Col>
-          </Row>
-          <br /><br />
+        </Row>
+        <br /><br />
+        <Row className={styles.sheettable}>
+          <Col xs={1}></Col>
+          <Col xs={1}><OutputText cols="12" name="ERA" main="ERA" value={valPerformance.ERA} /></Col>
+          <Col xs={1}><OutputText cols="12" name="gamesP" main="G" value={valPerformance.gamesP} /></Col>
+          <Col xs={1}><OutputText cols="12" name="IP" main="IP" value={valPerformance.IP} /></Col>
+          <Col xs={1}><OutputText cols="12" name="BH" main="H" value={valPerformance.BH} /></Col>
+          <Col xs={1}><OutputText cols="12" name="BRUN" main="R" value={valPerformance.BRUN} /></Col>
 
-        </div>
+          <Col xs={1}><OutputText cols="12" name="ER" main="ER" value={valPerformance.ER} /></Col>
+          <Col xs={1}><OutputText cols="12" name="BHR" main="HR" value={valPerformance.BHR} /></Col>
+          <Col xs={1}><OutputText cols="12" name="HB" main="HB" value={valPerformance.HB} /></Col>
+          <Col xs={1}><OutputText cols="12" name="BB" main="BB" value={valPerformance.BB} /></Col>
+          <Col xs={1}> <OutputText cols="12" name="K" main="K" value={valPerformance.K} /></Col>
+          <Col xs={1}></Col>
+        </Row>
+        <br /><br />
+        <Row className={styles.sheettable}>
+          <Col xs={1}></Col>
+          <Col xs={3}><OutputText cols="12" name="EXIT" main="Exit Velocity" value={valPerformance.EXIT} /></Col>
+          <Col xs={4}><OutputText cols="12" name="SixtyYardSplit" main="60 yard sprint(s)" value={valPerformance.SixtyYardSplit} /></Col>
+          <Col xs={4}><OutputText cols="12" name="TenYardSplit" main="10 yard sprint(s)" value={valPerformance.TenYardSplit} /></Col>
+        </Row>
+        <br /><br />
+        <Row className={styles.sheettable}>
+          <Col xs={1}></Col>
+          <Col xs={1}><OutputText cols="12" name="gamesH" main="G" value={valPerformance.gamesH} /></Col>
+          <Col xs={1}><OutputText cols="12" name="AB" main="AB" value={valPerformance.AB} /></Col>
+          <Col xs={1}><OutputText cols="12" name="AVG" main="AVG" value={valPerformance.AVG} /></Col>
+          <Col xs={1}><OutputText cols="12" name="Hits" main="H" value={valPerformance.Hits} /></Col>
+          <Col xs={1}><OutputText cols="12" name="Hit2B" main="2B" value={valPerformance.Hit2B} /></Col>
+          <Col xs={1}><OutputText cols="12" name="Hit3B" main="3B" value={valPerformance.Hit3B} /></Col>
+          <Col xs={1}><OutputText cols="12" name="HR" main="HR" value={valPerformance.HR} /></Col>
+          <Col xs={1}><OutputText cols="12" name="BK" main="K" value={valPerformance.BK} /></Col>
+          <Col xs={1}><OutputText cols="12" name="BBB" main="BB" value={valPerformance.BBB} /></Col>
+          <Col xs={1}><OutputText cols="12" name="OPS" main="OPS" value={valPerformance.OPS} /></Col>
+          <Col xs={1}></Col>
+
+        </Row>
+        <br /><br />
+
       </div>
     </Container >
   );
