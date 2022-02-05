@@ -9,6 +9,7 @@ import { Context } from "../components/stores";
 import styles from "../styles/Contant.module.css";
 import Moment from "react-moment";
 import OutputText from "../components/OutputText";
+import OutputTextBT from "../components/OutputTextBT";
 import OutputDate from "../components/OutputDate";
 import OutputMonth from "../components/OutputMonth";
 import FileBase64 from "react-file-base64";
@@ -301,7 +302,10 @@ const BaseballPage = () => {
             <Image placeholder="empty" src={photo.image} alt="Picture of the author" width={"320rem"} height={"320rem"} />
           </Col>
           <Col xs={7}>
-            <OutputTextBig cols="12" name="PassportName" main="" value={values.PassportName} />
+            <Row>
+              <OutputTextBig cols="12" name="PassportName" main="" value={values.PassportName} />
+            </Row>
+
             <OutputTextWhite cols="12" name="Gender" main="" value={values.Gender} />
             <OutputDate cols="12" name="Birthday" main="" value={valContact.birthday} />
             <OutputContent cols="12" name="Height" main="" value1={feetHeight(values.Height)} value2={(values.Weight / 0.454).toFixed(1)} unit1="" unit2="lb" />
@@ -312,7 +316,7 @@ const BaseballPage = () => {
           <Col xs={1}></Col>
           <Col xs={3}>
             <Row>
-              <OutputText cols="5" name="LeftRightHand" main="B/T" value={values.LeftRightHand} />
+              <OutputTextBT cols="5" name="LeftRightHand" main="B/T" value={values.LeftRightHand} />
               <OutputText cols="7" name="PriPosition" main="Position" value={values.PriPosition} />
             </Row>
           </Col>
